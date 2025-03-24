@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+.hservice{
+    font-family: 'poppins';
+    font-size: 60px;
+    color: #007bff;
+}
+
+.title-cards-section {
+    display: flex;
+    justify-content: space-around; 
+    padding: 50px 20px;
+    flex-wrap: wrap; 
+    font-family: 'Poppins';
+  }
+  
+  .title-card {
+    width: 300px;
+    height: 350px; 
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-sizing: border-box; 
+  }
+  
+  .title-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .title-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .card-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    align-self: center;
+  }
+  
+  .card-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  @media (max-width: 900px) {
+    .title-card {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .title-card {
+      width: 100;
+    }
+  }

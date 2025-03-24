@@ -1,0 +1,16 @@
+.location-display {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+  }
+  
+  .location-display.error {
+    color: red;
+  }
+  
+  .location-display.loading {
+    color: gray;
+  }

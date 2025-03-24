@@ -1,0 +1,89 @@
+/* HeroSection.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.habout{
+    font-size: 60px;
+    color: black;
+    font-family: 'Poppins';
+}
+
+.hero {
+    display: flex;
+    height: 800px; /* Adjust height as needed (viewport height) */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width/height calculations */
+  }
+  
+  .hero-image {
+    border-radius: 500px;
+    height: 400px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent image overflow */
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    max-height: 100%; /* Ensure image doesn't exceed container height */
+  }
+  
+  .hero-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .hero-button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    align-self: flex-start; /* Align button to the start of flex container */
+  }
+  
+  .hero-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column; /* Stack image and content vertically on smaller screens */
+      height: auto; /* Allow height to adjust based on content */
+    }
+  
+    .hero-image,
+    .hero-content {
+      flex: none; /* Prevent flex from affecting width */
+      width: 100%; /* Take full width */
+    }
+  
+    .hero-image {
+      margin-bottom: 20px; /* Add spacing between image and content */
+    }
+  }
