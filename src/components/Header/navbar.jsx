@@ -84,7 +84,7 @@ export const Navbar = () => {
           </ul>
         </nav>
         <button className="location-btn" onClick={getLocation}>{location}</button>
-        <button className="login">LOGIN</button>
+        <button className="login">Login</button>
       </div>
     </>
   );

@@ -1,49 +1,51 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import './contact.css';
 
+const contact = () => {
 
-const ContactUs = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically send the email and message to a server
-    console.log('Email:', email);
-    console.log('Message:', message);
-    // Reset form fields
-    setEmail('');
-    setMessage('');
+    formData.append("access_key", "860bdf79-ed62-4a2c-9a15-6659d95e4a96");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
   };
 
   return (
-    <div className="contact-us">
+    <div className="contact-us-simple">
       <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onSubmit}>
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <label htmlFor="name">Your Name:</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Your Email:</label>
+          <input type="email" id="email" name="email" />
         </div>
         <div className="form-group">
           <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          />
+          <textarea id="message" name="message" />
         </div>
-        <button type="submit" className="submit-button">Submit</button>
+        <button className='btncnt' type="submit">Submit</button>
       </form>
     </div>
   );
 };
 
-export default ContactUs;
+export default contact;

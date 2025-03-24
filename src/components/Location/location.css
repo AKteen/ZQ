@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
 .location-display {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f0f0;
-    font-family: sans-serif;
-  }
-  
-  .location-display.error {
-    color: red;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: greenyellow;
+  font-family: sans-serif;
+}
+
+.location-display.error {
+    font-family: 'Poppins';
+    color: black;
   }
   
   .location-display.loading {
-    color: gray;
+    font-family: 'Poppins';
+    color: black;
   }
