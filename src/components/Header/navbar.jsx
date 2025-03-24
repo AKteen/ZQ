@@ -74,7 +74,7 @@ export const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <img className="logo" src="src/components/Header/zenLogo.png" alt="ZenQ_logo" />
+        <img className="logo" src="\zenLogo.png" alt="ZenQ_logo" />
         <nav>
           <ul>
             <li><a href="#">Home</a></li>

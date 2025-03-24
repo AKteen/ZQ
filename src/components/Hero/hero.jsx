@@ -10,7 +10,7 @@ const hero = () => {
   return (
     <section className="hero">
       <div className="hero-image">
-        <img src="src\components\Hero\hero.jpg" alt="Hero Image" />
+        <img src="\hero.png" alt="Hero Image" />
       </div>
       <div className="hero-content">
         <h1>Welcome to Our Amazing Website</h1>

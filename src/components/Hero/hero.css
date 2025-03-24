@@ -3,16 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .hero {
-  font-family: 'Poppins';
-    display: flex;
-    height: 700px; 
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box; 
-  }
-  
+  background: url('/bg.png') center/cover no-repeat; 
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  height: 700px; 
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 0px 0px 40px black;
+}
   .hero-image {
     border-radius: 500px;
     height: 400px;
@@ -54,18 +59,19 @@
   }
   
   .hero-button {
-    background-color: #007bff;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
     align-self: flex-start; 
+    font-family: 'poppins';
   }
   
   .hero-button:hover {
-    background-color: #0056b3;
+    box-shadow: 0px 0px 50px white;
   }
   
   

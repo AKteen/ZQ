@@ -10,10 +10,11 @@ const about = () => {
 
   return (
     <>
+    
     <center>
     <h1 className='habout'>About ZenQuest</h1>
     </center>
-    <section className="hero">
+    <section className="about">
         <div className="hero-content">
         <h1>Welcome to Our Amazing Website</h1>
         <p>
@@ -29,7 +30,7 @@ const about = () => {
         <button className="hero-button">Learn More</button>
       </div>
       <div className="hero-image">
-        <img src="src\components\Hero\hero.jpg" alt="Hero Image" />
+        <img src="\about.png" alt="Hero Image" />
       </div>
       
     </section>

@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Location />
+      {/* <Location /> */}
       <Hero />
       <About />
       <Service />
